@@ -8,47 +8,15 @@ The project is being developed with **scalability and customization in mind**, a
 
 ### Home — Shared Board
 
-A real-time shared board where both users can:
-
-- Create, edit, and delete messages.
-- See changes in real time.
-- See who created each message.
-- Receive notifications when the board is updated.
-
 ### 🇩🇪 Phrases & Lessons
 
-A shared language-learning section containing:
-
 **Phrases**
-- Spanish, English, and German entries.
-- Create, edit, and delete phrases.
-- Real-time synchronization.
 
 **Lessons**
-- Title and content.
-- Create, edit, and delete lessons.
-- Scrollable list.
-
-Changes to these sections notify the other user.
 
 ### Kisses & Hugs
 
-A real-time counter for two types of interactions:
-
-- Kisses
-- Hugs
-
-Users can add or subtract custom quantities. Confirmed interactions update the shared counter and notify the other user.
-
 ### Bucket List
-
-A shared list of things to do together.
-
-- Create, edit, and delete items.
-- Mark completed items with strikethrough.
-- Real-time synchronization.
-- Copy the entire list in a WhatsApp-friendly numbered format.
-- Notifications for relevant list changes.
 
 ## Customization
 
@@ -60,10 +28,6 @@ The application supports:
 - 🇬🇧 English
 - 🇪🇸 Spanish
 - 🇩🇪 German
-
-User preferences are persisted so they can be maintained between sessions.
-
-The application also uses a custom background image, logo, and Google Font.
 
 ## Notifications
 
