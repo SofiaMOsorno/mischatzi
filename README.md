@@ -1,17 +1,74 @@
-# mischatzi
+# Mi Schatzi
 
-A new Flutter project.
+**Mi Schatzi** is a personal mobile application built with **Flutter** and **Firebase**, designed as a private space for two users to share messages, language lessons, affectionate interactions, and future plans.
 
-## Getting Started
+The project is being developed with **scalability and customization in mind**, allowing its architecture and features to evolve over time.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+### Home — Shared Board
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+### 🇩🇪 Phrases & Lessons
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Phrases**
+
+**Lessons**
+
+### Kisses & Hugs
+
+### Bucket List
+
+## Customization
+
+The application supports:
+
+- Normal theme with a soft and light color palette.
+- 🇩🇪 German-inspired theme.
+- 🇲🇽 Mexican-inspired theme.
+- 🇬🇧 English
+- 🇪🇸 Spanish
+- 🇩🇪 German
+
+## Notifications
+
+The main features are designed to notify the other user when relevant changes or interactions occur.
+
+Notifications are handled through a dedicated notification service, keeping this functionality separated from the application UI and business logic.
+
+## Architecture
+
+The project follows a modular structure separating screens, reusable widgets, providers, services, models, configuration, and utilities.
+
+```text
+lib/
+├── main.dart
+├── config/
+│   ├── firebase_config.dart
+│   └── routes.dart
+├── models/
+│   ├── user_model.dart
+│   └── app_state.dart
+├── providers/
+│   ├── theme_provider.dart
+│   ├── language_provider.dart
+│   └── user_provider.dart
+├── widgets/
+│   ├── custom_modal.dart
+│   ├── bottom_navigation_bar.dart
+│   └── top_app_bar.dart
+├── screens/
+│   ├── user_selection_screen.dart
+│   ├── home_screen.dart
+│   ├── phrases_screen.dart
+│   ├── kisses_screen.dart
+│   └── bucket_list_screen.dart
+├── services/
+│   ├── database_service.dart
+│   └── notification_service.dart
+├── utils/
+│   ├── app_colors.dart
+│   ├── app_themes.dart
+│   └── app_localization.dart
+└── assets/
+    ├── fonts/
+    └── images/
