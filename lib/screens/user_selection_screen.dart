@@ -37,7 +37,7 @@ class UserSelectionScreen extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Who are you?',
-                      style: GoogleFonts.chicle(
+                      style: GoogleFonts.calistoga(
                         fontSize: 32,
                         fontWeight: FontWeight.w600,
                         color: Colors.white,
@@ -76,7 +76,7 @@ class UserSelectionScreen extends StatelessWidget {
             // Nombre del usuario EN MAYÚSCULAS
             Text(
               user.displayName.toUpperCase(),
-              style: GoogleFonts.chicle(
+              style: GoogleFonts.calistoga(
                 fontSize: 88,
                 fontWeight: FontWeight.w700,
                 color: Colors.white,

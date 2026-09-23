@@ -6,7 +6,7 @@ enum ThemeType { normal, germany, mexico }
 
 class AppThemes {
   static ThemeData getTheme(ThemeType themeType) {
-    final baseTextStyle = GoogleFonts.chicle(
+    final baseTextStyle = GoogleFonts.calistoga(
       color: AppColors.textDark,
     );
 

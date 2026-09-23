@@ -24,7 +24,7 @@ class CustomBottomNavBar extends StatelessWidget {
       unselectedIconTheme: const IconThemeData(size: 42), // Iconos más grandes
       items: const [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.filter_frames_outlined),
           // house_rounded, house_sharp
           label: '',
         ),
@@ -37,6 +37,12 @@ class CustomBottomNavBar extends StatelessWidget {
           label: '',
         ),
         BottomNavigationBarItem(
+          icon: Icon(Icons.movie),
+          //icon: Icon(Icons.theaters_sharp),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          //icon: Icon(Icons.view_list_rounded),
           icon: Icon(Icons.list_alt_rounded),
           label: '',
         ),
@@ -44,3 +50,4 @@ class CustomBottomNavBar extends StatelessWidget {
     );
   }
 }
+//volunteer_activism ?? whatshot_rounded ?? wc

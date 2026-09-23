@@ -19,7 +19,7 @@ class DropdownModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final marginSide = 16.0; // Margen de los lados
+    final marginSide = 10.0; // Margen de los lados
     
     // Calcular posición X según alineación
     double leftPosition;

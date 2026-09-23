@@ -88,7 +88,7 @@ class _TopAppBarState extends State<TopAppBar> {
   ) {
     final isSelected = code == currentLang;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6),
+      padding: const EdgeInsets.symmetric(vertical: 3),
       child: ElevatedButton(
         onPressed: () {
           context.read<LanguageProvider>().setLanguage(code);
@@ -98,15 +98,15 @@ class _TopAppBarState extends State<TopAppBar> {
           backgroundColor: isSelected
               ? Theme.of(context).colorScheme.primary
               : Theme.of(context).colorScheme.onPrimary,
-          minimumSize: const Size(double.infinity, 32),
+          minimumSize: const Size(double.infinity, 45),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
         ),
         child: Text(
           label,
-          style: GoogleFonts.chicle(
-            fontSize: 14,
+          style: GoogleFonts.calistoga(
+            fontSize: 25,
             color: isSelected ? Colors.black : Colors.black,
             fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
           ),
@@ -124,7 +124,7 @@ class _TopAppBarState extends State<TopAppBar> {
   ) {
     final isSelected = themeType == currentTheme;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6),
+      padding: const EdgeInsets.symmetric(vertical: 3),
       child: ElevatedButton(
         onPressed: () {
           context.read<ThemeProvider>().setTheme(themeType);
@@ -132,17 +132,17 @@ class _TopAppBarState extends State<TopAppBar> {
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: isSelected
-              ? Theme.of(context).colorScheme.tertiary
-              : Theme.of(context).colorScheme.secondary,
-          minimumSize: const Size(double.infinity, 32),
+              ? Theme.of(context).colorScheme.secondary
+              : Theme.of(context).colorScheme.onPrimary,
+          minimumSize: const Size(double.infinity, 45),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
         ),
         child: Text(
           label,
-          style: GoogleFonts.chicle(
-            fontSize: 14,
+          style: GoogleFonts.calistoga(
+            fontSize: 25,
             color: isSelected ? Colors.black : Colors.black,
             fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
           ),
@@ -160,7 +160,7 @@ class _TopAppBarState extends State<TopAppBar> {
       context: context,
       builder: (context) => DropdownModal(
         position: position,
-        width: 140,
+        width: 200,
         alignment: 'left', // ← AGREGUÉ ESTO
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -183,7 +183,7 @@ class _TopAppBarState extends State<TopAppBar> {
       context: context,
       builder: (context) => DropdownModal(
         position: position,
-        width: 140,
+        width: 200,
         alignment: 'left', // ← AGREGUÉ ESTO
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -203,12 +203,12 @@ class _TopAppBarState extends State<TopAppBar> {
     final translate = (String key) =>
         AppLocalization.translate(key, langProvider.languageCode);
     final position = _getButtonPosition(_settingsButtonKey);
-
+    bool _notificationsEnabled = true;
     showDialog(
       context: context,
       builder: (context) => DropdownModal(
         position: position,
-        width: 180,
+        width: 230,
         alignment: 'right',
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -227,7 +227,7 @@ class _TopAppBarState extends State<TopAppBar> {
                 ),
                 child: Text(
                   translate('full_reset'),
-                  style: GoogleFonts.chicle(
+                  style: GoogleFonts.calistoga(
                     fontSize: 20,
                     color: Colors.black,
                   ),
@@ -249,17 +249,23 @@ class _TopAppBarState extends State<TopAppBar> {
                     Expanded(
                       child: Text(
                         translate('notifications'),
-                        style: GoogleFonts.chicle(
+                        style: GoogleFonts.calistoga(
                           fontSize: 20,
                           color: Colors.black,
                         ),
                       ),
                     ),
-                    Checkbox(
-                      checkColor: Theme.of(context).colorScheme.primary,
+                    Switch(
+                      value: _notificationsEnabled,
+                      onChanged: (value) {
+                        setState(() {
+                          _notificationsEnabled = value;
+                        });
+                      },
                       activeColor: Colors.black,
-                      value: true,
-                      onChanged: (value) {},
+                      activeTrackColor: Theme.of(context).colorScheme.primary,
+                      inactiveThumbColor: Colors.grey,
+                      inactiveTrackColor: Colors.grey.shade300,
                     ),
                   ],
                 ),
@@ -275,7 +281,7 @@ class _TopAppBarState extends State<TopAppBar> {
               icon: const Icon(Icons.meeting_room_rounded, size: 18),
               label: Text(
                 translate('logout'),
-                style: GoogleFonts.chicle(
+                style: GoogleFonts.calistoga(
                   fontSize: 20,
                 ),
               ),
